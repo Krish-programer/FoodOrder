@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FoodOrder | Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="logo" href="index.html"><span class="logo-mark">⚑</span><span>Food<span
+                    class="accent">Order</span></span></a>
+        <nav class="nav"><a href="index.html" class="">Home</a><a href="menu.html" class="">Menu</a><a href="about.html"
+                class="">About</a><a href="contact.html" class="">Contact</a></nav><div class="actions"><a class="cart-pill" href="cart.html" aria-label="View cart"><span aria-hidden="true">🛒</span><b class="cart-count" hidden>0</b></a></div>
+        
+    </header>
+    <main class="container page">
+        <div class="stepper">
+            <div class="step active"><span class="step-num">1</span>REVIEW</div>
+            <div class="step"><span class="step-num">2</span>CHECKOUT</div>
+            <div class="step"><span class="step-num">3</span>SUCCESS</div>
+        </div>
+        <section class="cart-layout">
+            <div>
+                <div class="menu-top">
+                    <h1 class="title">Your <span class="accent">Shopping Cart</span></h1><button class="subtitle" data-clear-cart style="border:0;background:none;cursor:pointer">🗑 Clear Cart</button>
+                </div>
+                <div class="cart-items" aria-live="polite"></div>
+                <div class="promo card">
+                    <div>
+                        <h3 style="margin:0">Promo code preview</h3><span style="color:#aeb3ba;font-size:12px">WELCOME20 is shown on Promotions as a sample offer. This demo can only preview its displayed discount.</span>
+                    </div>
+                    <div>
+                        <label class="label" for="promo-code">Demo promo code</label>
+                        <div class="promo-box"><input id="promo-code" name="promoCode" autocomplete="off" aria-describedby="promo-help promo-feedback" placeholder="WELCOME20"><button type="button" class="btn orange-btn" data-apply-promo>Apply</button><button type="button" class="btn outline-btn" data-clear-promo>Clear</button></div>
+                        <p id="promo-help" class="tax-explanation">Sample only; active dates and first-order eligibility cannot be verified here.</p>
+                        <p id="promo-feedback" class="promo-feedback" role="status" aria-live="polite"></p>
+                    </div>
+                </div>
+                <p style="margin-top:35px">← <a href="menu.html"><b>Continue Ordering</b></a></p>
+            </div>
+            <aside class="summary card">
+                <h2>Order <span class="accent">Summary</span></h2>
+                <div class="summary-row"><span>SUBTOTAL</span><b data-cart-subtotal>₹0</b></div>
+                <div class="summary-row"><span>DELIVERY FEE (DEMO)</span><b data-cart-delivery>₹0</b></div>
+                <div class="summary-row"><span>DISCOUNT</span><b data-cart-discount>₹0</b></div>
+                <div class="summary-row"><span>GST (5% AFTER DISCOUNT)</span><b data-cart-tax>₹0</b></div>
+                <p class="tax-explanation">GST is calculated at 5% of the discounted item subtotal, rounded to the nearest rupee. Delivery fee is not configured; this demo total excludes any real delivery charge.</p>
+                <div class="total">TOTAL AMOUNT <b data-cart-total style="display:block">₹0</b></div>
+                <p><a class="btn dark-btn" style="width:100%;text-align:center" href="checkout.html">Proceed to Checkout
+                        →</a></p>
+                <div class="note">🚚 <b>DELIVERY</b><br>Contact us to confirm delivery availability and fees: <a href="tel:4447778889">4447778889</a> or <a href="mailto:foodorder123@gamil.com">foodorder123@gamil.com</a>.</div>
+                <p style="text-align:center;font-size:10px;color:#87909b;margin-top:25px">Demo only. No payment is processed.</p>
+                <p class="tax-explanation"><a href="terms-of-service.html#cancellations">Cancellation and refund information</a></p>
+            </aside>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo"><span class="logo-mark">⚑</span>Food<span class="accent">Order</span></div>
+                <p>Providing the best food delivery experience with speed, care and taste.</p>
+                
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="popular-dishes.html">Popular Dishes</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                
+                
+                <p>Address: Shop 12, Hill Road, Bandra West, Mumbai, Maharashtra 400050<br>Email: <a href="mailto:foodorder123@gamil.com">foodorder123@gamil.com</a><br>Phone: <a href="tel:4447778889">4447778889</a></p>
+            </div>
+        </div>
+        <div class="container bottom">© 2026 FoodOrder. Developed with passion for foodies.</div>
+    </footer>
+<script src="menu-data.js"></script><script src="shop-cart.js"></script>
+</body>
+
+</html>
+
+

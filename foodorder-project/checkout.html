@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FoodOrder | Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="logo" href="index.html"><span class="logo-mark">⚑</span><span>Food<span
+                    class="accent">Order</span></span></a>
+        <nav class="nav"><a href="index.html" class="">Home</a><a href="menu.html" class="">Menu</a><a href="about.html"
+                class="">About</a><a href="contact.html" class="">Contact</a></nav><div class="actions"><a class="cart-pill" href="cart.html" aria-label="View cart"><span aria-hidden="true">🛒</span><b class="cart-count" hidden>0</b></a></div>
+        
+    </header>
+    <main class="container page">
+        <div class="stepper">
+            <div class="step done"><span class="step-num">✓</span>REVIEW</div>
+            <div class="step active"><span class="step-num">2</span>CHECKOUT</div>
+            <div class="step"><span class="step-num">3</span>PREVIEW</div>
+        </div>
+        <section class="checkout-layout">
+            <div>
+                <h1 class="title">Checkout <span class="accent">Details</span></h1>
+                <form id="checkout-form" novalidate>
+                    <p class="form-required-note"><span aria-hidden="true">*</span> Required field</p>
+                    <div class="form-section">
+                        <h3><span class="number">1</span> Personal Information</h3>
+                        <div class="form-grid">
+                            <div><label class="label" for="first-name">First Name <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="first-name" name="firstName" autocomplete="given-name" aria-describedby="first-name-error" data-error-id="first-name-error" required><p class="field-error" aria-live="polite" id="first-name-error" hidden></p></div>
+                            <div><label class="label" for="last-name">Last Name <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="last-name" name="lastName" autocomplete="family-name" aria-describedby="last-name-error" data-error-id="last-name-error" required><p class="field-error" aria-live="polite" id="last-name-error" hidden></p></div>
+                            <div><label class="label" for="checkout-email">Email Address <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="checkout-email" name="email" type="email" autocomplete="email" aria-describedby="checkout-email-error" data-error-id="checkout-email-error" required><p class="field-error" aria-live="polite" id="checkout-email-error" hidden></p></div>
+                            <div><label class="label" for="checkout-phone">Phone Number <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="checkout-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="checkout-phone-error" data-error-id="checkout-phone-error" required><p class="field-error" aria-live="polite" id="checkout-phone-error" hidden></p></div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3><span class="number">2</span> Delivery Address</h3>
+                        <label class="label" for="delivery-address">Street address <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="delivery-address" name="address" autocomplete="street-address" aria-describedby="delivery-address-error" data-error-id="delivery-address-error" required><p class="field-error" aria-live="polite" id="delivery-address-error" hidden></p>
+                        <div class="form-grid three" style="margin-top:20px">
+                            <div><label class="label" for="delivery-city">City <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="delivery-city" name="city" autocomplete="address-level2" aria-describedby="delivery-city-error" data-error-id="delivery-city-error" required><p class="field-error" aria-live="polite" id="delivery-city-error" hidden></p></div>
+                            <div><label class="label" for="delivery-state">State <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="delivery-state" name="state" autocomplete="address-level1" aria-describedby="delivery-state-error" data-error-id="delivery-state-error" required><p class="field-error" aria-live="polite" id="delivery-state-error" hidden></p></div>
+                            <div><label class="label" for="delivery-postal">PIN code <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></label><input class="field" id="delivery-postal" name="postalCode" type="text" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{6}" aria-describedby="delivery-postal-error" data-error-id="delivery-postal-error" required><p class="field-error" aria-live="polite" id="delivery-postal-error" hidden></p></div>
+                        </div>
+                        <label class="label" for="delivery-notes">Delivery instructions (optional)</label><textarea class="field" id="delivery-notes" name="notes" rows="3" style="margin-top:8px"></textarea>
+                    </div>
+                    <div class="form-section">
+                        <h3><span class="number">3</span> Payment Method <span aria-hidden="true">*</span><span class="visually-hidden"> required</span></h3>
+                        <div class="payment" role="radiogroup" aria-labelledby="payment-group-label" aria-describedby="payment-method-error" aria-required="true">
+                            <span class="visually-hidden" id="payment-group-label">Choose one demo payment method (required)</span>
+                            <label class="pay-card selected"><input type="radio" name="paymentMethod" value="Cash on delivery (demo)" aria-describedby="payment-method-error" data-error-id="payment-method-error" checked required>💵<br><br>CASH / COD</label>
+                            <label class="pay-card"><input type="radio" name="paymentMethod" value="Credit card (demo)" aria-describedby="payment-method-error" data-error-id="payment-method-error" required>▣<br><br>CREDIT CARD</label>
+                            <label class="pay-card"><input type="radio" name="paymentMethod" value="UPI (demo)" aria-describedby="payment-method-error" data-error-id="payment-method-error" required>UPI<br><br>UPI</label>
+                        </div>
+                        <p class="field-error" aria-live="polite" id="payment-method-error" hidden></p>
+                        <div class="note" style="margin-top:20px" data-payment-status role="status" aria-live="polite">Demo total: <b data-checkout-pay>₹0</b>. Payment methods are demo choices only; no payment service is connected or will process payment.</div>
+                    </div>
+                    <div class="menu-top" style="margin-top:45px"><a href="cart.html">← Return to Cart</a><button type="submit" class="btn orange-btn" data-place-order>Create Local Preview</button></div>
+                    <p id="checkout-feedback" role="alert" aria-live="assertive"></p>
+                    <section id="checkout-preview" class="note checkout-preview" hidden role="status" aria-live="polite">
+                        <h3>Local demo preview</h3>
+                        <p data-preview-details></p>
+                        <p><b>Order status:</b> Not submitted to a restaurant.<br><b>Payment status:</b> Not processed.</p>
+                        <p>Next: adjust your cart if needed. This demo cannot provide tracking, accept cancellations, or process refunds. See the <a href="terms-of-service.html#cancellations">cancellation/refund information</a> or <a href="contact.html">contact page</a>.</p>
+                        <p><a class="btn orange-btn" href="menu.html">Back to Menu</a></p>
+                    </section>
+                    <section class="note checkout-preview" data-checkout-history hidden aria-labelledby="checkout-history-title">
+                        <h3 id="checkout-history-title">Recent local previews</h3>
+                        <p>Saved in this browser only. No order was sent and no payment was processed.</p>
+                        <ul data-checkout-history-list></ul>
+                    </section>
+                </form>
+            </div>
+            <aside class="summary card dark">
+                <h2>Order Summary</h2>
+                <div class="checkout-summary-items" aria-live="polite"></div>
+                <p class="tax-explanation tax-explanation-dark">GST is calculated at 5% of the discounted item subtotal, rounded to the nearest rupee. Delivery fees are not included in this local demo preview; call <a href="tel:4447778889">4447778889</a> or email <a href="mailto:foodorder123@gamil.com">foodorder123@gamil.com</a> to confirm delivery availability and fees.</p>
+                <p class="tax-explanation tax-explanation-dark" data-checkout-promo-note></p>
+                <p class="tax-explanation tax-explanation-dark"><a href="terms-of-service.html#cancellations">Cancellation and refund information</a></p>
+            </aside>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo"><span class="logo-mark">⚑</span>Food<span class="accent">Order</span></div>
+                <p>Providing the best food delivery experience with speed, care and taste.</p>
+                
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="popular-dishes.html">Popular Dishes</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                
+                
+                <p>Address: Shop 12, Hill Road, Bandra West, Mumbai, Maharashtra 400050<br>Email: <a href="mailto:foodorder123@gamil.com">foodorder123@gamil.com</a><br>Phone: <a href="tel:4447778889">4447778889</a></p>
+            </div>
+        </div>
+        <div class="container bottom">© 2026 FoodOrder. Developed with passion for foodies.</div>
+    </footer>
+<script src="menu-data.js"></script><script src="shop-cart.js"></script><script src="site-forms.js"></script>
+</body>
+
+</html>
+
+

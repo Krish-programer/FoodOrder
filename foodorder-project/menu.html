@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FoodOrder | Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="logo" href="index.html"><span class="logo-mark">⚑</span><span>Food<span
+                    class="accent">Order</span></span></a>
+        <nav class="nav"><a href="index.html" class="">Home</a><a href="menu.html" class="active">Menu</a><a
+                href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav><div class="actions"><a class="cart-pill" href="cart.html" aria-label="View cart"><span aria-hidden="true">🛒</span><b class="cart-count" hidden>0</b></a></div>
+        
+    </header>
+    <main class="container page">
+        <div class="eyebrow">HOME › MENU</div>
+        <div class="menu-top">
+            <div>
+                <h1 class="title">Our Full <span class="accent">Menu</span></h1>
+                <p class="subtitle">Discover authentic Indian favourites prepared fresh by our chefs.</p>
+            </div>
+            <div class="search"><label class="visually-hidden" for="menu-search">Search menu items by dish or description</label><input id="menu-search" type="search" placeholder="Search for food, cuisines..."><button type="button">Search</button></div>
+        </div>
+        <section class="menu-layout">
+            <aside>
+                <div class="card filter-card">
+                    <h3 id="category-filter-label">☷ Categories</h3><div class="filter-radio-group" role="radiogroup" aria-labelledby="category-filter-label"><label><input type="radio" name="menu-category" checked> All Items</label><label><input type="radio" name="menu-category"> Vegetarian</label><label><input type="radio" name="menu-category"> Non-Vegetarian</label><label><input type="radio" name="menu-category"> South Indian</label><label><input type="radio" name="menu-category"> Rice &amp; Biryani</label><label><input type="radio" name="menu-category"> Tandoor &amp; Kebabs</label><label><input type="radio" name="menu-category"> Street Food</label><label><input type="radio" name="menu-category"> Desserts &amp; Drinks</label><label><input type="radio" name="menu-category"> Breads</label></div>
+                </div>
+                <div class="card filter-card">
+                    <h3>☷ Price Range</h3><input type="range" min="0" max="2000" value="2000" style="width:100%" aria-label="Maximum price in rupees" aria-describedby="price-current">
+                    <p>₹0 <span style="float:right">₹2,000</span></p>
+                    <p class="filter-current">Maximum price: <output id="price-current" data-price-value>₹2,000</output></p>
+                </div>
+                <div class="card filter-card">
+                    <h3 id="diet-filter-label">♥ Preferences</h3><div class="filter-radio-group" role="radiogroup" aria-labelledby="diet-filter-label"><label><input type="radio" name="diet-preference" value="all" checked> All diets</label><label><input type="radio" name="diet-preference" value="veg"> Vegetarian</label><label><input type="radio" name="diet-preference" value="nonveg"> Non-Vegetarian</label></div>
+                    <p class="filter-current" data-diet-status aria-live="polite">Diet: All diets</p>
+                    <p class="filter-current" data-active-filters aria-live="polite">Active filters: none</p>
+                    <p><button type="button" class="btn outline-btn filter-apply-btn" style="width:100%">Apply Filters</button></p>
+                    <p><button type="button" class="btn outline-btn" data-clear-menu-filters style="width:100%">Clear Filters</button></p>
+                </div>
+            </aside>
+            <section>
+                <div class="menu-top"><span class="subtitle" data-menu-status aria-live="polite" style="margin:0">Showing menu items</span><select class="chip" data-menu-sort aria-label="Sort menu results"><option value="popularity">Sort by: Popularity</option><option value="rating">Sort by: Rating</option><option value="name">Sort by: Name</option><option value="price-low">Price: Low to high</option><option value="price-high">Price: High to low</option></select></div>
+                <div class="food-grid"></div>
+                <nav data-menu-pagination class="menu-pagination" aria-label="Menu pagination"><button class="chip pagination-control" type="button" disabled aria-label="Previous page">‹</button><button class="chip pagination-control" type="button" data-page="1" aria-current="page" aria-label="Page 1">1</button><button class="chip pagination-control" type="button" disabled aria-label="Next page">›</button></nav>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo"><span class="logo-mark">⚑</span>Food<span class="accent">Order</span></div>
+                <p>Providing the best food delivery experience with speed, care and taste.</p>
+                
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="popular-dishes.html">Popular Dishes</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                
+                
+                <p>Address: Shop 12, Hill Road, Bandra West, Mumbai, Maharashtra 400050<br>Email: <a href="mailto:foodorder123@gamil.com">foodorder123@gamil.com</a><br>Phone: <a href="tel:4447778889">4447778889</a></p>
+            </div>
+        </div>
+        <div class="container bottom">© 2026 FoodOrder. Developed with passion for foodies.</div>
+    </footer>
+<script src="menu-data.js"></script>
+<script src="shop-cart.js"></script>
+</body>
+
+</html>
+
